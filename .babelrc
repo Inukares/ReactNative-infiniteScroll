@@ -1,12 +1,15 @@
 {
   "presets": ["react-native"],
   "plugins": [
-    ["module-resolver", {
-      "root": ["./AwesomeApp"],
-      "alias": {
-        "test": "./test",
-        "underscore": "lodash"
+    [
+      "module-resolver",
+      {
+        "root": ["./AwesomeApp"],
+        "alias": {
+          "test": "./test",
+          "underscore": "lodash"
+        }
       }
-    }]
+    ]
   ]
 }
