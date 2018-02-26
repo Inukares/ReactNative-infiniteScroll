@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { FlatList } from "react-native";
 import { Container, List } from "native-base";
 import { connect } from "react-redux";
 import { getPending, getError, getUsersList } from "./selectors";
