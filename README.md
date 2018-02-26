@@ -1,1 +1,3 @@
-Fetching users from API with Redux-Saga in React Native.
+# ReactNative-infiniteScroll
+
+Project in React Native using Redux Saga to fetch data in a proper manner, allowing user to infinitely scroll content
