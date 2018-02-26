@@ -1,4 +1,4 @@
-import { takeLatest, takeEvery, call, put } from "redux-saga/effects";
+import { takeLatest, call, put } from "redux-saga/effects";
 import request from "axios";
 import { getRandomString } from "../helpers/getRandomString";
 import _ from "lodash";

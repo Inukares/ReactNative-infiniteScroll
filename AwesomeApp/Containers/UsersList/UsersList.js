@@ -1,17 +1,6 @@
 import React, { Component } from "react";
-import { StyleSheet, View, FlatList } from "react-native";
-import {
-  Container,
-  Header,
-  Content,
-  List,
-  Text,
-  ListItem,
-  SearchBar,
-  Left,
-  Body,
-  Right
-} from "native-base";
+import { View, FlatList } from "react-native";
+import { Container, List } from "native-base";
 import { connect } from "react-redux";
 import { getPending, getError, getUsersList } from "./selectors";
 import PropTypes from "prop-types";
@@ -32,11 +21,10 @@ class UsersList extends Component {
   _keyExtractor = (item, index) => item.id;
 
   render() {
-    console.log(this.props);
     const { pending, usersList, onRequestUsers } = this.props;
 
     return usersList.length > 0 ? (
-      <List containerStyle={{ marginBottom: 20 }}>
+      <List>
         <Container>
           <FlatList
             data={usersList}
@@ -44,7 +32,6 @@ class UsersList extends Component {
             renderItem={({ item }) => {
               return <ListedItem item={item} />;
             }}
-            // ItemSeparatorComponent={this.renderSeparator}
             ListFooterComponent={() => renderFooter(pending)}
             refreshing={pending}
             onEndReached={this.requestUsers}

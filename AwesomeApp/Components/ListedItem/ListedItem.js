@@ -1,16 +1,6 @@
 import React from "react";
-import { StyleSheet, View, FlatList, Button } from "react-native";
-import {
-  Header,
-  Content,
-  List,
-  Text,
-  ListItem,
-  SearchBar,
-  Left,
-  Body,
-  Right
-} from "native-base";
+import { StyleSheet, View, Button } from "react-native";
+import { List, Text, ListItem } from "native-base";
 import PropTypes from "prop-types";
 
 export const ListedItem = ({ item }) => (
@@ -23,10 +13,12 @@ export const ListedItem = ({ item }) => (
             <Text style={styles.idStyling}>{item.id}</Text>
           </View>
           <View style={styles.rightWrapper}>
-            <Button
-              title="Press me to show my name"
-              onPress={() => alert(item.name)}
-            />
+            <View style={styles.buttonStyle}>
+              <Button
+                title="Press me to show my name"
+                onPress={() => alert(item.name)}
+              />
+            </View>
           </View>
         </View>
       </View>
@@ -50,8 +42,10 @@ const styles = StyleSheet.create({
     color: "blue",
     flexDirection: "row",
     alignSelf: "flex-start",
-    justifyContent: "flex-start",
     alignContent: "space-between"
+  },
+  buttonStyle: {
+    marginBottom: 18
   },
   idStyling: {
     flex: 1,
@@ -59,13 +53,12 @@ const styles = StyleSheet.create({
     color: "magenta",
     flexDirection: "row",
     alignSelf: "flex-start",
-    justifyContent: "flex-start",
     alignContent: "space-between"
   },
   rightWrapper: {
     flex: 0.5,
     flexDirection: "column",
-    justifyContent: "flex-end"
+    justifyContent: "flex-start"
   },
   columnWrapper: {
     flex: 1,
@@ -76,8 +69,7 @@ const styles = StyleSheet.create({
   },
   rightContent: {
     flex: 1,
-    flexDirection: "column",
-    justifyContent: "center"
+    flexDirection: "column"
   }
 });
 

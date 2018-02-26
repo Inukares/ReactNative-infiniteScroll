@@ -1,13 +1,5 @@
 import React, { Component } from "react";
-import {
-  Platform,
-  StyleSheet,
-  Text,
-  View,
-  AppRegistry,
-  Image,
-  FlatList
-} from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import { store } from "./store/store";
 import UsersList from "./Containers/UsersList/UsersList";
 import { Provider } from "react-redux";
@@ -15,10 +7,13 @@ import axios from "axios";
 
 export default class App extends Component<Props> {
   render() {
+    console.disableYellowBox = true;
     return (
       <Provider store={store}>
         <View style={styles.container}>
-          <Text style={styles.title}>Wohoo you're rendering app js</Text>
+          <Text style={styles.title}>
+            Wohoo you're running people-listing app!
+          </Text>
           <View>
             <UsersList />
           </View>
