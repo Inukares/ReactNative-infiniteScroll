@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, View, FlatList } from "react-native";
+import { StyleSheet, View, FlatList, Button } from "react-native";
 import {
   Header,
   Content,
@@ -23,7 +23,10 @@ export const ListedItem = ({ item }) => (
             <Text style={styles.idStyling}>{item.id}</Text>
           </View>
           <View style={styles.rightWrapper}>
-            <Text style={styles.rightContent}>dummy content lolo</Text>
+            <Button
+              title="Press me to show my name"
+              onPress={() => alert(item.name)}
+            />
           </View>
         </View>
       </View>
@@ -34,13 +37,11 @@ export const ListedItem = ({ item }) => (
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    fontSize: 12,
     alignItems: "flex-start",
     flexWrap: "nowrap"
   },
   leftWrapper: {
     flex: 0.5,
-    fontSize: 12,
     flexDirection: "column"
   },
   emailStyling: {
