@@ -4,6 +4,6 @@ Project in React Native using Redux Saga to fetch data upon scrolling the conten
 The content is inifitely-scrollable and uses lazy loading.
 
 # How to start
-`git clone https://github.com/Inukares/ReactNative-infiniteScroll.git`
-`npm install`
+`git clone https://github.com/Inukares/ReactNative-infiniteScroll.git`\n
+`npm install`\n
 `react-native run-ios`
